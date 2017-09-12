@@ -84,32 +84,40 @@ $(document).ready(function(){
 
   } );
   var continentCoordinates;
+  var continentClicked;
   //On Continent Clicks
   $("path").on("click", function(){
     //Saves Attribute Of Aria-Label To Variable
-    var continentClicked = $(this).attr("aria-label");
+    continentClicked = $(this).attr("aria-label");
+    console.log(continentClicked);
     //Checks What The Variable Is Then Sets Coordinate Variable Accordingly
-    if(continentClicked = "Asia  "){
+    if(continentClicked == "Asia  "){
       continentCoordinates = "34.0479,100.6197";
+      console.log(continentCoordinates);
     }
-    else if(continentClicked = "North America  "){
+    else if(continentClicked == "North America  "){
       continentCoordinates = "54.5260,-105.2551";
+      console.log(continentCoordinates);
     }
-    else if(continentClicked = "South America  "){
+    else if(continentClicked == "South America  "){
       continentCoordinates = "-8.7832,-55.4915";
+      console.log(continentCoordinates);
     }
-    else if(continentClicked = "Europe  "){
+    else if(continentClicked == "Europe  "){
       continentCoordinates = "54.5260,15.2551";
+      console.log(continentCoordinates);
     }
-    else if(continentClicked = "Australia  "){
+    else if(continentClicked == "Australia  "){
       continentCoordinates = "-25.2744,133.7751";
+      console.log(continentCoordinates);
     }
-    else if(continentClicked = "Africa  "){
+    else if(continentClicked == "Africa  "){
       continentCoordinates = "-8.7832,34.5085";
+      console.log(continentCoordinates);
     }
     //Youtube API
     $.ajax({
-            url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates +"&locationRadius=500mi&type=video&maxResults=3",
+            url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates +"&locationRadius=100mi&type=video&maxResults=3",
             method: "GET"
           })
           .done(function(response){
