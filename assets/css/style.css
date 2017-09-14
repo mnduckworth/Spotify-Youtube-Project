@@ -1,5 +1,53 @@
-body { background-color: #3f3e3b; color: #fff; }
+body {
+    background-color: #3f3e3b;
+    color: #fff;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.jumbotron {
+    background-color: transparent;
+    border: solid white;
+    margin: 250px;
+    padding: 50px;
+}
+
+.panel {
+    background-color: transparent;
+    text-align: center;
+}
+
 #chartdiv {
-  width: 100%;
- height: 800px;
-}	
+    width: 100%;
+    height: 750px;
+}
+
+#content,
+#youtube,
+#spotify {
+    height: 500px;
+    border: 1px white solid;
+}
+
+#youtube{
+    text-align: center;
+}
+/* SCROLLSPY NAV BAR */
+
+body {
+    font: 14px/2 Georgia, serif;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+}
+
+p,
+ul,
+h1 {
+    margin: 0 0 1rem 0;
+}
