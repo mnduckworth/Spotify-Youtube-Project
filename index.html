@@ -17,73 +17,79 @@
 </head>
 
 <body>
-    <div class='container'>
-        <div id="page-wrap">
-            <div class='row'>
-                <div class='col-md-12'>
-                    <div style='display:none;'>
-                        <h2 id="one">Section One</h2>
-                    </div>
-                    <div class='jumbotron text-center' id="top">
-                        <h1>The World's Top Music</h1>
-                        <br>
-                        <button class='btn btn-warning btn-lg'><a href="#two">Start Listening</a></button>
-                    </div>
+
+    <div id='welcome'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <div style='display:none;'>
+                    <h2 id="one">Section One</h2>
+                </div>
+                <div class='jumbotron text-center' id="top">
+                    <h1>The World's Top Music</h1>
+                    <br>
+                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening</a></button>
                 </div>
             </div>
-            <!-- ROW -->
-            <br>
-            <br>
-            <div class='row'>
-                <div class='col-md-12'>
-                    <div class='panel' 'text center'>
-                        <h2 id="two">Pick a continent!</h2>
-                        <br>
-                        <button class='btn btn-warning btn-lg'><a href="#three">check it out on Spotify</a></button>
-                        <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
-                    </div>
+        </div>
+    </div>
+    <!-- ROW -->
+    <div id='mapyo'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <div class='panel' 'text center'>
+                    <h1 id="two">Pick a continent!</h1>
+                    <br>
+                    <button class='btn btn-info btn-lg'><a href="#three">check it out on Spotify</a></button>
+                    <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
                 </div>
             </div>
-            <br>
-            <br>
-            <div class='row'>
-                <div class='col-md-12'>
-                    <div id="chartdiv"></div>
-                </div>
-            </div>
-            <br>
-            <br>
+        </div>
+        <div class='row'>
             <!-- THIS IS THE MAP DIV -->
-            <div class='row'>
-                <div class='col-md-12'>
-                    <div class='panel' 'text-center'>
-                        <h2 id="three"></h2>
+            <div class='col-md-12'>
+                <div id="chartdiv"></div>
+            </div>
+        </div>
+    </div>
+    <div id='allstuff'>
+        <div class='row'>
+            <div class='col-md-12'>
+                <div class='panel' 'text-center'>
+                    <h2 id="three"></h2>
 
-                        <button class='btn btn-warning btn-lg'><a href="#two">Back to Map</a></button>
-                    </div>
+
                 </div>
             </div>
-
+        </div>
+        <div id="data">
             <div class="row">
                 <div id='content' class='col-md-4'>
                     <h1>TOP 3 SONGS</h1>
                     <div id="songlist"></div>
                 </div>
                 <div id='youtube' class='col-md-4'>
-                    <h1>YOUTUBE VIDEO</h1>
-                    <div id="videopreview"></div>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <div id="videopreview"></div>
+                    </div>
                 </div>
                 <div id='spotify' class='col-md-4'>
                     <h1>SPOTIFY PLAYLIST WIDGET THING</h1>
                 </div>
             </div>
-
-
+            <br>
+            <div id="btnDiv" class='panel' 'text-center' 'col-md-12'>
+                <button class='btn btn-info btn-lg'><a href="#two">Back to Map</a></button>
+            </div>
 
         </div>
-        <br>
-        <br>
-        <!-- PAGE WRAP -->
+
+
+        <div id="footer" class='panel' 'text-center' 'col-md-12'>
+            <h1>FOOTERCONTENT</h1>
+        </div>
+    </div>
+
+    <!-- PAGE WRAP -->
     </div>
     <!-- END CONTAINER DIV -->
 </body>
