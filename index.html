@@ -3,6 +3,7 @@
 
 <head>
     <title>World's Top Music</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
@@ -26,8 +27,9 @@
                 </div>
                 <div class='jumbotron text-center' id="top">
                     <h1>The World's Top Music</h1>
+                    <h2>We've collected the top 3 songs from each region for your listening pleasure.</h2>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening</a></button>
+                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening!</a></button>
                 </div>
             </div>
         </div>
@@ -39,15 +41,15 @@
                 <div class='panel' 'text center'>
                     <h1 id="two">Pick a continent!</h1>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#three">check it out on Spotify</a></button>
-                    <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
                 </div>
             </div>
         </div>
         <div class='row'>
             <!-- THIS IS THE MAP DIV -->
             <div class='col-md-12'>
+                <a href='#three'>
                 <div id="chartdiv"></div>
+            </a>
             </div>
         </div>
     </div>
@@ -60,15 +62,16 @@
 
                 </div>
             </div>
-        </div>
+        </div><div class='containter'>
         <div id="data">
+            
             <div class="row">
-                <div id='content' class='col-md-4'>
-                    <h1>TOP 3 SONGS</h1>
+                <div id='content' class='col-md-4 text-center'>
+                    <h1 id='top3'>Top 3 Videos</h1>
                     <div id="songlist"></div>
                 </div>
                 <div id='youtube' class='col-md-4'>
-                    <div class="embed-responsive embed-responsive-16by9">
+                    <div class="embed-responsive embed-responsive-4by3">
                         <div id="videopreview"></div>
                     </div>
                 </div>
@@ -80,7 +83,7 @@
             <div id="btnDiv" class='panel' 'text-center' 'col-md-12'>
                 <button class='btn btn-info btn-lg'><a href="#two">Back to Map</a></button>
             </div>
-
+            </div>
         </div>
 
 

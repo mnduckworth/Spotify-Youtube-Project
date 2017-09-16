@@ -79,7 +79,7 @@ $(document).ready(function() {
         "zoomControl": {
             "panControlEnabled": false,
             "zoomControlEnabled": false,
-            "homeButtonEnabled": false
+            "homeButtonEnabled": true
         },
 
     });
