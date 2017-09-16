@@ -1,4 +1,5 @@
 $(document).ready(function() {
+
     var map = AmCharts.makeChart("chartdiv", {
 
         "type": "map",
@@ -130,9 +131,6 @@ $(document).ready(function() {
             url: "https://accounts.spotify.com/authorize/?client_id=6ff6fe25e03344d4b9f91c15f4b9fbb9&response_type=code&redirect_uri=https://satsumao.github.io/Spotify-Youtube-Project/",
             method: "GET"
         })
-        .done(function(response){
-            response.addHeader("Access-Control-Allow-Origin", "*");
-        })
     })
     //On Continent Clicks
     $(document).on("click", "path", function() {
@@ -175,7 +173,7 @@ $(document).ready(function() {
                 console.log(response);
             })
             $.ajax({
-                url: "https://api.spotify.com/v1/search?type=track",
+                url: "https://api.spotify.com/v1/search?type=track&q=" + songName,
                 method: "GET"
             })
             .done(function(response){
