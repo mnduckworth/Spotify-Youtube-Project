@@ -79,7 +79,7 @@ $(document).ready(function() {
         "zoomControl": {
             "panControlEnabled": false,
             "zoomControlEnabled": false,
-            "homeButtonEnabled": false
+            "homeButtonEnabled": true
         },
 
     });
@@ -124,9 +124,18 @@ $(document).ready(function() {
         });
     var continentCoordinates;
     var continentClicked;
+    var songName;
+    $(".login").on("click", function(){
+        $.ajax({
+            url: "https://accounts.spotify.com/authorize/?client_id=6ff6fe25e03344d4b9f91c15f4b9fbb9&response_type=code&redirect_uri=https://satsumao.github.io/Spotify-Youtube-Project/",
+            method: "GET"
+        })
+        .done(function(response){
+            response.addHeader("Access-Control-Allow-Origin", "*");
+        })
+    })
     //On Continent Clicks
     $(document).on("click", "path", function() {
-    	console.log('hi');
         $("#songlist").empty();
         $("#videopreview").empty();
         //Saves Attribute Of Aria-Label To Variable
@@ -148,7 +157,7 @@ $(document).ready(function() {
         console.log(continentClicked);
         //Youtube API
         $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3",
+                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true",
                 method: "GET"
             })
             .done(function(response) {
@@ -159,9 +168,17 @@ $(document).ready(function() {
                 }
                 $(document).on("click", "img", function() {
                     var videoIds = $(this).attr("id");
+                    songName = response.items[videoIds].snippet.title;
                     $("#videopreview").empty();
                     $("#videopreview").append("<iframe src='https://www.youtube.com/embed/" + response.items[videoIds].id.videoId + "''></iframe")
                 })
+                console.log(response);
+            })
+            $.ajax({
+                url: "https://api.spotify.com/v1/search?type=track",
+                method: "GET"
+            })
+            .done(function(response){
                 console.log(response);
             })
     })

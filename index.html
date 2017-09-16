@@ -17,7 +17,7 @@
 </head>
 
 <body>
-
+    <button class="login">Login With Spotify</button>
     <div id='welcome'>
         <div class='row'>
             <div class='col-md-12'>
@@ -27,7 +27,7 @@
                 <div class='jumbotron text-center' id="top">
                     <h1>The World's Top Music</h1>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening</a></button>
+                    <a href="#two"><button class='btn btn-info btn-lg'>Start Listening</button></a>
                 </div>
             </div>
         </div>
@@ -39,7 +39,6 @@
                 <div class='panel' 'text center'>
                     <h1 id="two">Pick a continent!</h1>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#three">check it out on Spotify</a></button>
                     <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
                 </div>
             </div>
@@ -47,7 +46,9 @@
         <div class='row'>
             <!-- THIS IS THE MAP DIV -->
             <div class='col-md-12'>
-                <div id="chartdiv"></div>
+                <a href="#three">
+                    <div id="chartdiv"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -78,7 +79,7 @@
             </div>
             <br>
             <div id="btnDiv" class='panel' 'text-center' 'col-md-12'>
-                <button class='btn btn-info btn-lg'><a href="#two">Back to Map</a></button>
+                <a href="#two"><button class='btn btn-info btn-lg'>Back to Map</button></a>
             </div>
 
         </div>
