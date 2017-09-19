@@ -1,3 +1,25 @@
+$(document).on("click", "#onClick", function(){
+
+    var pullInput = $("#searchItunes").val().trim();
+
+    var queryUrl = "https://itunes.apple.com/search?term=" + pullInput + "&media=music&entity=musicTrack&limit=1";
+
+        $.ajax({
+            url: queryUrl,
+            method: "GET"
+        })
+        .done(function(response){
+
+            var parseResponse = JSON.parse(response);
+            console.log(parseResponse);
+            $("#artistName").append("Artist Name: " + parseResponse.results[0].artistName);
+            $("#trackName").append("Track Name: " + parseResponse.results[0].trackName);
+            $("#trackPrice").append("Track Price: $ " + parseResponse.results[0].trackPrice);
+            $("#iTune").append("Check it out on iTunes: ");
+            $("#ituneLink").append(parseResponse.results[0].trackViewUrl);
+    });
+});
+
 $(document).ready(function() {
     var map = AmCharts.makeChart("chartdiv", {
 
