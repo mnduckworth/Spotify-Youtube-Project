@@ -18,7 +18,6 @@
 </head>
 
 <body>
-
     <div id='welcome'>
         <div class='row'>
             <div class='col-md-12'>
@@ -29,7 +28,7 @@
                     <h1>The World's Top Hits</h1>
                     <h2>We've collected the top 3 songs from each region for your listening pleasure.</h2>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening!</a></button>
+                    <a href="#two"><button class='btn btn-info btn-lg'>Start Listening</button></a>
                 </div>
             </div>
         </div>
@@ -41,12 +40,16 @@
                 <div class='panel' 'text center'>
                     <h1 id="two">Choose a continent</h1>
                     <br>
+                    <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
                 </div>
             </div>
         </div>
         <div class='row'>
             <!-- THIS IS THE MAP DIV -->
             <div class='col-md-12'>
+                <a href="#three">
+                    <div id="chartdiv"></div>
+                </a>
                 <a href='#three'>
                 <div id="chartdiv"></div>
             </a>
@@ -80,6 +83,7 @@
                 </div>
             </div>
             <br>
+<<<<<<< HEAD
             <br>
             <br>
             <br>
@@ -90,6 +94,10 @@
             <br>
             <div id="btnDiv" class= 'text-center' 'col-md-12'>
                 <button class='btn btn-info btn-lg'><a href="#two">Back to Map</a></button>
+=======
+            <div id="btnDiv" class='panel' 'text-center' 'col-md-12'>
+                <a href="#two"><button class='btn btn-info btn-lg'>Back to Map</button></a>
+>>>>>>> 5809e712651349d6d564d7fb762a5f683c236e2a
             </div>
             </div>
         </div>

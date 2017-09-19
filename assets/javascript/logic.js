@@ -124,9 +124,9 @@ $(document).ready(function() {
         });
     var continentCoordinates;
     var continentClicked;
+    var songName;
     //On Continent Clicks
     $(document).on("click", "path", function() {
-    	console.log('hi');
         $("#songlist").empty();
         $("#videopreview").empty();
         //Saves Attribute Of Aria-Label To Variable
@@ -148,7 +148,7 @@ $(document).ready(function() {
         console.log(continentClicked);
         //Youtube API
         $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3",
+                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true",
                 method: "GET"
             })
             .done(function(response) {
@@ -159,6 +159,7 @@ $(document).ready(function() {
                 }
                 $(document).on("click", "img", function() {
                     var videoIds = $(this).attr("id");
+                    songName = response.items[videoIds].snippet.title;
                     $("#videopreview").empty();
                     $("#videopreview").append("<iframe src='https://www.youtube.com/embed/" + response.items[videoIds].id.videoId + "''></iframe")
                 })
