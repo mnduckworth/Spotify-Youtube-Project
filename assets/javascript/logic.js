@@ -148,7 +148,7 @@ $(document).ready(function() {
         console.log(continentClicked);
         //Youtube API
         $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true",
+                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true&order=rating&q=(Music Video)",
                 method: "GET"
             })
             .done(function(response) {
