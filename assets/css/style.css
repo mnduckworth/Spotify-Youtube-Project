@@ -50,7 +50,8 @@
     
     #footer {
         color: white;
-        background-color: black;
+        background:rgba(14, 13, 13, 0.5);
+        height: 150px;
     }
     
    #welcome {
@@ -67,8 +68,9 @@
         background-image: url('../images/lights2.jpg');
         z-index: -1;
     }
-    #top3 {
+    #top3,#itunes {
         text-decoration: underline;
         line-height: 1.2;
         margin-bottom: 5px;
+        text-align: center;
     }
