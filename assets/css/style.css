@@ -1,73 +1,110 @@
-    body {
-        color: black;
-        font: 14px/2 Georgia, serif;
-    }
-    
-    h1,
-    h2 {
-        line-height: 1.2;
-    }
-    
-    p,
-    ul,
-    h1 {
-        margin: 0 0 1rem 0;
-    }
-    
-    a {
-        text-decoration: none;
-        color: black;
-    }
-    
-    .jumbotron {
-        background-color: transparent;
-        border: solid white;
-        margin: 250px;
-        padding: 50px;
-    }
-    
-    .panel {
-        background-color: transparent;
-        text-align: center;
-    }
-    
-    #chartdiv {
-        width: 100%;
-        height: 800px;
-    }
-    
-    #welcome,
-    #data {
-        height: 100vh;
-    }
-    
-    #content,
-    #youtube,
-    #spotify {
-        height: 500px;
-        border: 1px white solid;
-    }
-    
-    #youtube {
-        border: none;
-    }
-    
-    #footer {
-        color: white;
-        background-color: black;
-    }
-    
-    #welcome {
-        background-image: url('../images/concert.jpg');
-        z-index: -1;
-    }
-    
-    #mapyo {
-        background-image: url('../images/black1.jpg');
-        z-index: -1;
-    }
-    
-    #allstuff {
-        background-image: url('../images/lights2.jpg');
-        z-index: -1;
-    }
+body {
+    font: 14px/2 Georgia, serif;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2 {
+    line-height: 1.2;
+    text-shadow: 1px 1px grey;
+}
+
+p,
+ul,
+h1 {
+    margin: 0 0 1rem 0;
+    outline: none;
+}
+
+a {
+    text-decoration: none !important;
+    outline: none !important;
+    color: white;
+}
+
+.jumbotron {
+    background-color: transparent;
+    margin: 250px;
+    padding: 50px;
+}
+
+.panel {
+    background-color: transparent;
+    text-align: center;
+}
+
+#chartdiv {
+    width: 100%;
+    height: 850px;
+}
+
+#welcome,
+#data {
+    height: 100vh;
+}
+
+#content,
+#youtube,
+#spotify {
+    height: 50vh;
+    background: rgba(14, 13, 13, 0.5);
+}
+
+#youtube {
+    border: none;
+}
+
+#footer {
+    color: white;
+    background: rgba(14, 13, 13, 0.5);
+    height: 150px;
+}
+
+#welcome {
+    background-image: url('../images/concert.jpg');
+    z-index: -1;
+}
+
+#mapyo {
+    background-image: url('../images/black1.jpg');
+    z-index: -1;
+}
+
+#allstuff {
+    background-image: url('../images/lights2.jpg');
+    z-index: -1;
+}
+
+#top3,
+#itunes {
+    text-decoration: underline;
+    line-height: 1.2;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+#info {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    margin: 10px;
+}
+
+#linkThing {
+    float: left;
+    padding: 0px;
+    padding-left: 5px;
+    margin: 10px;
+}
+
+#searchItunes {
+    color: black;
+    border-radius: 6px;
+    margin: 8px;
+}
+
+button:hover {
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
+    transition-duration: 0.4s;
+}

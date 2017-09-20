@@ -3,6 +3,7 @@
 
 <head>
     <title>World's Top Music</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/normalize.css" type="text/css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <script src="https://www.amcharts.com/lib/3/ammap.js"></script>
@@ -17,7 +18,6 @@
 </head>
 
 <body>
-
     <div id='welcome'>
         <div class='row'>
             <div class='col-md-12'>
@@ -25,9 +25,10 @@
                     <h2 id="one">Section One</h2>
                 </div>
                 <div class='jumbotron text-center' id="top">
-                    <h1>The World's Top Music</h1>
+                    <h1>The World's Top Hits</h1>
+                    <h2>We've collected the top 3 songs from each region for your listening pleasure.</h2>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#two">Start Listening</a></button>
+                    <a href="#two"><button class='btn btn-info btn-lg'>Start Listening</button></a>
                 </div>
             </div>
         </div>
@@ -37,17 +38,17 @@
         <div class='row'>
             <div class='col-md-12'>
                 <div class='panel' 'text center'>
-                    <h1 id="two">Pick a continent!</h1>
+                    <h1 id="two">Choose a continent</h1>
                     <br>
-                    <button class='btn btn-info btn-lg'><a href="#three">check it out on Spotify</a></button>
-                    <!--WE WANT THIS BUTTON TO GO AWAY. CLICKIGN THE CONTINENT SHOULD SIMPLY MOVE IT DOWN FOR US, BUT THIS IS AN EXAMPLE -->
                 </div>
             </div>
         </div>
         <div class='row'>
             <!-- THIS IS THE MAP DIV -->
             <div class='col-md-12'>
-                <div id="chartdiv"></div>
+                <a href="#three">
+                    <div id="chartdiv"></div>
+                </a>
             </div>
         </div>
     </div>
@@ -56,40 +57,55 @@
             <div class='col-md-12'>
                 <div class='panel' 'text-center'>
                     <h2 id="three"></h2>
-
-
                 </div>
             </div>
         </div>
-        <div id="data">
-            <div class="row">
-                <div id='content' class='col-md-4'>
-                    <h1>TOP 3 SONGS</h1>
-                    <div id="songlist"></div>
-                </div>
-                <div id='youtube' class='col-md-4'>
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <div id="videopreview"></div>
+        <div class='containter'>
+            <div id="data">
+
+                <div class="row">
+                    <div id='content' class='col-md-4 text-center'>
+                        <h1 id='top3'>Top 3 Videos</h1>
+                        <div id="songlist"></div>
+                    </div>
+                    <div id='youtube' class='col-md-4'>
+                        <div class="embed-responsive embed-responsive-4by3">
+                            <div id="videopreview"></div>
+                        </div>
+                    </div>
+                    <div id='spotify' class='col-md-4'>
+                        <h1 id='itunes'>Check it out on iTunes!</h1>
+                        <br>
+                        <div class='text-center'>
+                            <input type="text" id="searchItunes">
+                            <button class='btn btn-info btn-lg' id="onClick">Search</button>
+                        </div>
+                        <br>
+                        <div id='info'>
+                            <div id="artistName"></div>
+                            <div id="trackName"></div>
+                            <div id="trackPrice"></div>
+                        </div>
+                        <div id='linkThing'>
+                            <div id='imgDiv'></div>
+                            <div id="ituneLink"></div>
+                        </div>
                     </div>
                 </div>
-                <div id='spotify' class='col-md-4'>
-                    <h1>SPOTIFY PLAYLIST WIDGET THING</h1>
+                <br>
+                <br>
+                <br>
+                <div id="btnDiv" class='text-center' 'col-md-12'>
+                    <a href="#two"><button class='btn btn-info btn-lg'>Back to Map</button></a>
                 </div>
             </div>
-            <br>
-            <div id="btnDiv" class='panel' 'text-center' 'col-md-12'>
-                <button class='btn btn-info btn-lg'><a href="#two">Back to Map</a></button>
+            <div id="footer" class='panel' 'text-center' 'col-md-12'>
+                <br>
+                <h3>Copyright @ Group 7 Productions</h3>
             </div>
-
         </div>
 
-
-        <div id="footer" class='panel' 'text-center' 'col-md-12'>
-            <h1>FOOTERCONTENT</h1>
-        </div>
-    </div>
-
-    <!-- PAGE WRAP -->
+        <!-- PAGE WRAP -->
     </div>
     <!-- END CONTAINER DIV -->
 </body>
