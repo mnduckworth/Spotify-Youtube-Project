@@ -7,7 +7,6 @@ body {
 h1,
 h2 {
     line-height: 1.2;
-    text-shadow: 1px 1px grey;
 }
 
 p,
@@ -27,6 +26,7 @@ a {
     background-color: transparent;
     margin: 250px;
     padding: 50px;
+    text-shadow: 2px 2px grey;
 }
 
 .panel {
@@ -48,7 +48,7 @@ a {
 #youtube,
 #spotify {
     height: 50vh;
-    background: rgba(14, 13, 13, 0.5);
+    background: linear-gradient( to bottom, black, transparent);
 }
 
 #youtube {
@@ -72,13 +72,12 @@ a {
 }
 
 #allstuff {
-    background-image: url('../images/lights2.jpg');
-    z-index: -1;
+    background: linear-gradient( to bottom, black, transparent), url('../images/lights2.jpg');
 }
 
 #top3,
 #itunes {
-    text-decoration: underline;
+    font-weight: bold;
     line-height: 1.2;
     margin-bottom: 5px;
     text-align: center;
@@ -107,4 +106,20 @@ a {
 button:hover {
     box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);
     transition-duration: 0.4s;
+}
+
+a:hover {
+    color: white !important;
+    transition-duration: 0.2s;
+}
+
+#topof2 {
+    background: linear-gradient( to bottom, black, transparent);
+    outline: none;
+    text-align: center;
+    font-weight: bold;
+}
+
+#top3 {
+    margin-bottom: 20px;
 }
