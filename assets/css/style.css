@@ -1,5 +1,73 @@
-body { background-color: #3f3e3b; color: #fff; }
-#chartdiv {
-  width: 100%;
- height: 800px;
-}	
+    body {
+        color: black;
+        font: 14px/2 Georgia, serif;
+    }
+    
+    h1,
+    h2 {
+        line-height: 1.2;
+    }
+    
+    p,
+    ul,
+    h1 {
+        margin: 0 0 1rem 0;
+    }
+    
+    a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    .jumbotron {
+        background-color: transparent;
+        border: solid white;
+        margin: 250px;
+        padding: 50px;
+    }
+    
+    .panel {
+        background-color: transparent;
+        text-align: center;
+    }
+    
+    #chartdiv {
+        width: 100%;
+        height: 800px;
+    }
+    
+    #welcome,
+    #data {
+        height: 100vh;
+    }
+    
+    #content,
+    #youtube,
+    #spotify {
+        height: 500px;
+        border: 1px white solid;
+    }
+    
+    #youtube {
+        border: none;
+    }
+    
+    #footer {
+        color: white;
+        background-color: black;
+    }
+    
+    #welcome {
+        background-image: url('../images/concert.jpg');
+        z-index: -1;
+    }
+    
+    #mapyo {
+        background-image: url('../images/black1.jpg');
+        z-index: -1;
+    }
+    
+    #allstuff {
+        background-image: url('../images/lights2.jpg');
+        z-index: -1;
+    }
