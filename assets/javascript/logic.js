@@ -7,6 +7,7 @@ $(document).on("click", "#onClick", function() {
     $("#ituneLink").empty();
     $('<input>').empty();
     $("#imgDiv").empty();
+    $("#nothingFound").empty();
 
     var pullInput = $("#searchItunes").val().trim();
 
@@ -19,6 +20,11 @@ $(document).on("click", "#onClick", function() {
         .done(function(response) {
 
             var parseResponse = JSON.parse(response);
+            var resultCount = parseResponse.resultCount;
+            console.log(resultCount);
+            if (parseResponse.resultCount == 0) {
+                $("#nothingFound").append("Sorry, No Results Found");
+            }
             console.log(parseResponse);
             $("#artistName").append("Artist Name: " + parseResponse.results[0].artistName);
             $("#trackName").append("Track Name: " + parseResponse.results[0].trackName);
@@ -28,7 +34,7 @@ $(document).on("click", "#onClick", function() {
 
 
         });
-    pullInput.val("");
+    $("#searchItunes").val("");
 });
 
 $(document).ready(function() {
@@ -157,7 +163,7 @@ $(document).ready(function() {
         });
     var continentCoordinates;
     var continentClicked;
-
+    var videOrder = "rating";
     //On Continent Clicks
     $(document).on("click", "path", function() {
         var songName;
@@ -179,10 +185,20 @@ $(document).ready(function() {
         } else if (continentClicked == "Africa  ") {
             continentCoordinates = "-8.7832,34.5085";
         }
-        console.log(continentClicked);
-        //Youtube API
+        // Calls Youtube API
+        apiFunction();
+    });
+    // Checks Button To Set Video Order
+    $(document).on("click", ".videOrder", function(){
+        videOrder = $(this).attr("order");
+        apiFunction();
+    })
+    function apiFunction(){
+        $("#songlist").empty();
+        $("#videopreview").empty();
+        $("#chooseContinent").empty();
         $.ajax({
-                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true&order=rating&q=(Music Video)",
+                url: "https://www.googleapis.com/youtube/v3/search?key=AIzaSyBh5nvrC9BnoH0A7JF1mVhNKEIDdDpFn7s&topicId=/m/04rlf&part=snippet&location=" + continentCoordinates + "&locationRadius=500mi&type=video&maxResults=3&videoEmbeddable=true&order=" + videOrder + "&q=(Music Video)",
                 method: "GET"
             })
             .done(function(response) {
@@ -199,5 +215,5 @@ $(document).ready(function() {
                 })
                 console.log(response);
             })
-    });
+    }
 });

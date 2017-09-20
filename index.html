@@ -66,6 +66,12 @@
                 <div class="row">
                     <div id='content' class='col-md-4 text-center'>
                         <h1 id='top3'>Top 3 Videos</h1>
+                        <button class='btn btn-info btn-lg videOrder' order="relevance">Relevance</button>
+                        <button class='btn btn-info btn-lg videOrder' order="rating">Rating</button>
+                        <button class='btn btn-info btn-lg videOrder' order="viewCount">View Count</button>
+                        <div class="text-center" id="chooseContinent">
+                            <p>Please Choose A Continent.</p>
+                        </div>
                         <div id="songlist"></div>
                     </div>
                     <div id='youtube' class='col-md-4'>
@@ -81,6 +87,7 @@
                             <button class='btn btn-info btn-lg' id="onClick">Search</button>
                         </div>
                         <br>
+                        <div  class="text-center" id="nothingFound"></div>
                         <div id='info'>
                             <div id="artistName"></div>
                             <div id="trackName"></div>
